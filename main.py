@@ -1,6 +1,6 @@
 pins.digital_write_pin(DigitalPin.P0, 1)
 pins.set_pull(DigitalPin.P1, PinPullMode.PULL_UP)
-basic.show_icon(IconNames.HEART)
+basic.show_icon(IconNames.HAPPY)
 
 def on_forever():
     if pins.digital_read_pin(DigitalPin.P1) == 0:
