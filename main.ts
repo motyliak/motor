@@ -20,12 +20,13 @@ function motor_on() {
     basic.showIcon(IconNames.Yes)
 }
 
+let strip : neopixel.Strip = null
 let remote_control = false
 pins.digitalWritePin(DigitalPin.P0, 1)
 pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
 basic.showIcon(IconNames.Happy)
 remote_control = true
-let strip = neopixel.create(DigitalPin.P2, 8, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P2, 8, NeoPixelMode.RGB)
 strip.showRainbow(1, 360)
 strip.show()
 basic.forever(function on_forever() {

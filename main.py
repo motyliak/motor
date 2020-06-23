@@ -8,7 +8,6 @@ def on_button_pressed_a():
     motor_on()
     strip.rotate(1)
     strip.show()
-    
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_button_pressed_b():
@@ -20,6 +19,7 @@ input.on_button_pressed(Button.B, on_button_pressed_b)
 def motor_on():
     pins.digital_write_pin(DigitalPin.P0, 1)
     basic.show_icon(IconNames.YES)
+strip: neopixel.Strip = None
 remote_control = False
 pins.digital_write_pin(DigitalPin.P0, 1)
 pins.set_pull(DigitalPin.P1, PinPullMode.PULL_UP)
