@@ -20,6 +20,8 @@ def motor_on():
     pins.digital_write_pin(DigitalPin.P0, 1)
     basic.show_icon(IconNames.YES)
 
+strip: neopixel.Strip = None 
+
 remote_control = False
 pins.digital_write_pin(DigitalPin.P0, 1)
 pins.set_pull(DigitalPin.P1, PinPullMode.PULL_UP)
