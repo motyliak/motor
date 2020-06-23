@@ -31,7 +31,6 @@ strip = neopixel.create(DigitalPin.P2, 8, NeoPixelMode.RGB)
 strip.show_rainbow(1, 360)
 strip.show()
  
- 
 def on_forever():
     strip.show()
     if remote_control:
